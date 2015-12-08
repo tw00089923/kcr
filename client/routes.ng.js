@@ -12,6 +12,11 @@ angular.module("socially").config(function ($urlRouterProvider, $stateProvider, 
   $locationProvider.html5Mode(true);
 
   $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: 'client/parties/views/home.ng.html',
+      controller: 'homeControl'
+    })
     .state('parties', {
       url: '/parties',
       templateUrl: 'client/parties/views/parties-list.ng.html',
@@ -37,6 +42,7 @@ angular.module("socially").config(function ($urlRouterProvider, $stateProvider, 
       templateUrl:'client/parties/views/file.ng.html',
       controller:'fileControl'
     })
+      
     .state('partyDetails', {
       url: '/parties/:partyId',
       templateUrl: 'client/parties/views/party-details.ng.html',

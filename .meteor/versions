@@ -8,10 +8,8 @@ accounts-ui-unstyled@1.1.8
 aldeed:autoform@5.7.1
 aldeed:collection2@2.5.0
 aldeed:simple-schema@1.4.0
-angular@1.2.3
 angular-blaze-templates-compiler@0.0.1
 angular-meteor-data@0.0.6
-angular-templates@0.0.2
 angular-with-blaze@1.2.1
 angular:angular@1.4.8
 angularui:angular-google-maps@2.2.1
@@ -82,7 +80,6 @@ oauth1@1.1.5
 oauth2@1.1.5
 observe-sequence@1.0.7
 ordered-dict@1.0.4
-pbastowski:angular-babel@1.0.6
 promise@0.5.1
 random@1.0.5
 rate-limit@1.0.0

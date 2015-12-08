@@ -8,19 +8,21 @@ $scope.book = $meteor.object(Books, $stateParams.booksId);
 
 
 
-    
-/*
+
+
      		var vis = d3.select("#visualisation"),
-    	    WIDTH = 700,
-   			 HEIGHT = 500,
+    	    WIDTH = 1000,
+   			 HEIGHT = 700,
    			 MARGINS = {top: 20,right: 20,bottom: 20,left: 50  },
      		xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([2000,2016]),
      		yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([134,215]),
      		xAxis = d3.svg.axis().scale(xScale);
   			yAxis = d3.svg.axis().scale(yScale);
-    		/*vis.append("svg:g").call(xAxis);
+
+
+    		vis.append("svg:g").call(xAxis);
     		vis.append("svg:g").attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")").call(xAxis);
-    		/*vis.append("svg:g").call(yAxis);
+    		/*vis.append("svg:g").call(yAxis);*/
     		yAxis = d3.svg.axis().scale(yScale).orient("left");
     		vis.append("svg:g").attr("transform", "translate(" + (MARGINS.left) + ",0)").call(yAxis);
 
@@ -33,12 +35,12 @@ $scope.book = $meteor.object(Books, $stateParams.booksId);
         vis.append("svg:g").attr("class","axis").attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")").call(xAxis);
  
         vis.append("svg:g").attr("class","axis").attr("transform", "translate(" + (MARGINS.left) + ",0)").call(yAxis);
-*/
+
 
 $scope.students = $meteor.collection(Student, false).subscribe("student");
 
 
-
+/*
 var jsonCircles = [
    { "x_axis": 30, "y_axis": 30, "radius": 20, "color" : "green" },
    { "x_axis": 70, "y_axis": 70, "radius": 20, "color" : "purple"},
@@ -58,4 +60,6 @@ var circleAttributes = circles
                        .attr("cy", function (d) { return d.y_axis; })
                        .attr("r", function (d) { return d.radius; })
                       .style("fill", function(d) { return d.color; });
+
+                      */
   });
