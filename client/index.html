@@ -1,0 +1,47 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <!--button class="glyphicon glyphicon-save" ng-click="ad=!ad"></button>
+      <button class="glyphicon glyphicon-save" ng-hide="ad"></button>-->
+      <a class="navbar-brand" href="/parties">KCR</a>
+
+    </div>
+
+    <div class="navbar-right-container">
+
+      <blaze-template name="loginButtons"></blaze-template>
+    </div>
+  </div>
+</nav>
+<div class="row h100 ">
+    <div class="col-md-3 col-lg-3 side-bar">
+      
+      <ul class="nostyle">
+      <li>
+      <a href="/" ng-click="goCats = !goCats"><h4><span class="glyphicon glyphicon-th"></span>生產日報表</h4></a>
+      <ul ng-show="goCats" class="nostyle color-blue">
+        <a href="/d3_pro"><li><span class="glyphicon glyphicon-search">生產效率</span></li></a>
+        <a href="/"><li><span class="glyphicon glyphicon-save">新增生產報</span></li></a>
+        <a href="/"><li><span class="glyphicon glyphicon-edit">修改歷史報表</span></li></a>
+        <a href="/"><li><span class="glyphicon glyphicon-trash">刪除資料</span></li></a>
+      </ul>
+      </li>
+      <li><a href="/calendar"><h4><span class="glyphicon glyphicon-calendar"></span>日曆</h4></a></li>
+      <li><a href="/file"><h4><span class="glyphicon glyphicon-file"></span>檔案</h4></a></li>
+      </ul>
+    </div>
+    <div ui-view class="sidebar-left col-md-offset-3 col-sm-offset-3 col-lg-offset-3 col-xs-offset-1 col-xs-11 col-md-12 col-sm-12">
+
+    </div>
+</div>
+
+
+</body>

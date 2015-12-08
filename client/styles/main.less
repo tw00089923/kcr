@@ -1,0 +1,93 @@
+@color1 : #2F2933;
+@color2 : #01A2A6;
+@color3 : #29D9C2;
+@color4 : #BDF271;
+@color5 : #FFFFA6;
+@color6 : #2F2933;
+@color7 : #FF6F69;
+
+html,body{
+    height:100%;
+}
+
+body {
+    background-color: #f8f8f8;
+    padding-top: 50px;
+    font-family: 'Muli', sans-serif;
+}
+
+.h100{
+    height : 100%;
+}
+
+.w100{
+    width:100%;
+}
+.side-bar{
+	position: absolute;
+	left: 0 px;
+	padding-left:  0 px;
+	background-color: black;
+	height: 120%;
+	
+	@media (max-width: 800px) {
+        opacity: 0%;
+        width: 0%;
+    	padding-left: 0px;
+        background-color: white;
+        display: none !important;
+
+    };
+	
+}
+.mar{
+	margin-top: 10px;
+	color: blue;
+}
+
+.displaynone{
+ display: none !important;
+
+}
+.sidebar-left{
+
+	
+	width: auto;
+	background-color: white;
+
+}
+
+.border-1{
+	height: 100%;
+	background-color: blue;
+	@text-color:black;
+
+
+}
+.color-blue{
+   
+	color: bule;
+}
+
+.nostyle{
+	list-style: none;
+}
+
+.left___{
+	float: right;
+	@media (max-width: 768px) {
+        float:center;
+    };
+}
+.ma-main-container{
+    @media (min-width: 768px) {
+        padding-right : 0;
+    };
+
+}
+@import "../parties/styles/d3_pro.import.less";
+@import "../parties/styles/productivity.import.less";
+@import "../parties/styles/parties.import.less";
+@import "../parties/styles/navbar.import.less";
+@import "../parties/styles/new.party.import.less";
+@import "../parties/styles/party.details.import.less";

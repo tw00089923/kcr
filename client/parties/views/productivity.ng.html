@@ -1,0 +1,124 @@
+
+<div class="">
+
+<h1 class="text-center">生產日報表</h1>
+{{asas}}
+{{time2 | date:'yyyy-MM-dd'}}
+現有字串：{{work}}
+<br>
+整理字串：{{works}}
+<br>
+資料庫回傳：{{student}}
+<br>
+
+
+<br>
+
+<ng-form>
+  <div class="row ">
+
+    <label>線別</label>
+
+    <select name="singleSelect" ng-model="work.line" required>
+      <option value="option-201" ng-model="work.line">201</option>
+ 
+      <option value="option-202" ng-model="work.line">202</option>
+      <option value="option-203" ng-model="work.line">203</option>
+      <option value="option-206" ng-model="work.line">206</option>
+      <option value="option-207" ng-model="work.line">207</option>
+      <option value="option-208" ng-model="work.line">208</option>
+      <option value="option-209" ng-model="work.line">209</option>
+      <option value="option-210" ng-model="work.line">210</option>
+      <option value="option-211" ng-model="work.line">211</option>
+      <option value="option-212" ng-model="work.line">212</option>
+
+      </select>
+
+    
+
+
+    <label class="">日期</label>
+     <input type="date" id="exampleInput" name="input" ng-model="work.date"
+       placeholder="yyyy-MM-dd" min="2015-01-01" max="2015-12-31" require/>
+
+    <!--<label class="left">班別</label>
+  
+    <select class="left" name="singleSelect" ng-model="work.line[2]">
+      <option value="daysheet" ng-model="work.line">日班</option>
+      <option value="midsheet" ng-model="work.line">中班</option>
+      <option value="overtime" ng-model="work.line">加班</option>
+      <option value="nightsheet" ng-model="work.line">夜班</option>
+      
+    </select>
+    
+    -->
+    <br>
+    
+
+    
+    <label class="">工號:</label>
+    <input ng-model="work.work_number" class="form-control" type="text" placeholder="工號" required>
+  
+    <label>品名:</label>
+    <input ng-model="work.work_name" class="form-control" type="text" placeholder="品名" required>
+    <br>
+    <label>料號:</label>
+    <input ng-model="work.material" class="form-control" type="text" placeholder="料號" required>
+    
+    <label>工程別:</label>
+
+    <input ng-model="work.work_process" class="form-control" type="text" placeholder="工程別" required>
+    
+
+    <label>投入量:</label>
+    <input ng-model="work.work_input" class="form-control" ng-maxlength="2" type="number" size="12" placeholder="投入量" min="0" required>
+
+    <label>批量:</label>
+    <input ng-model="work.lottos" class="form-control" type="number" placeholder="批量" min="0" required> 
+
+    <label>良品:</label>
+    <input ng-model="work.goodnumber" class="form-control" type="number" placeholder="良品" min="0" required>
+
+    <label>累積:</label>
+    <input ng-model="work.accumlation" class="form-control" type="number" maxlength="12" placeholder="累積" min="0" required>
+
+    <label>不良品:</label>
+    <input ng-model="work.badnumber" class="form-control" type="number" size="10" placeholder="不良品" min="0" required>
+    <label>未完成品:</label>
+    <input ng-model="work.unfinished" class="form-control" type="number" placeholder="未完成品" min="0" required>
+
+    <label>開始時間:</label>
+    <input ng-model="work.starttime" class="form-control" type="time" required>
+    <label>結束時間:</label>
+    <input ng-model="work.endtime" class="form-control" type="time" id="" name="input" 
+       placeholder="時:分" min="08:00" max="17:50" required>
+    
+   <br>
+    <button class="col-xs-12" ng-click="studentremove()">CLear</button>
+    
+    <div class="">
+    <br>
+    <button type="button" class="btn btn-link col-lg-1 col-xs-12" ng-click="works.push(work);work=''"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+    
+    <button ng-click="confirm()"><span class="glyphicon glyphicon-th">上傳</span></button>
+  </div>
+  </ng-form>
+</div>
+
+
+<!--
+
+<ul>
+    <li ng-repeat="workductivities in parties">
+      <a href="/parties/{{productivities._id}}">修改內容</a>
+      {{productivities}}
+      <br>
+         
+    
+      <span><p>{{productivities.description}}</p>
+      <button ng-click="remove(productivities)">X</button></span>
+    </li>
+  </ul>
+
+-->
