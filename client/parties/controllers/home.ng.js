@@ -1,6 +1,7 @@
-angular.module('socially').controller('homeControl', ['$scope', function ($scope) {
+angular.module('socially').controller('homeControl', function ($scope) {
 	
 	$scope.ad ="sad";
+	
+	
 
-
-}]);
+});

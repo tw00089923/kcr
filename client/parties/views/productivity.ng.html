@@ -5,13 +5,14 @@
 {{asas}}
 {{time2 | date:'yyyy-MM-dd'}}
 現有字串：{{work}}
+
 <br>
 整理字串：{{works}}
 <br>
 資料庫回傳：{{student}}
 <br>
 
-
+{{fin}}
 <br>
 
 <ng-form>
@@ -67,7 +68,7 @@
     
     <label>工程別:</label>
 
-    <input ng-model="work.work_process" class="form-control" type="text" placeholder="工程別" required>
+    <input ng-model="work.work_process"  class="form-control" type="text" placeholder="工程別" required>
     
 
     <label>投入量:</label>
@@ -92,13 +93,15 @@
     <label>結束時間:</label>
     <input ng-model="work.endtime" class="form-control" type="time" id="" name="input" 
        placeholder="時:分" min="08:00" max="17:50" required>
-    
+     <label>標準工時:</label>
+    <input ng-model="work.standtime" class="form-control" type="number" placeholder="標準工時" required>
+
    <br>
-    <button class="col-xs-12" ng-click="studentremove()">CLear</button>
+    <button class="col-xs-12" ng-click="">CLear</button>
     
     <div class="">
     <br>
-    <button type="button" class="btn btn-link col-lg-1 col-xs-12" ng-click="works.push(work);work=''"><span class="glyphicon glyphicon-plus"></span></button>
+    <button type="button" class="btn btn-link col-lg-1 col-xs-12" ng-click="works.push(work);work=[]"><span class="glyphicon glyphicon-plus"></span></button>
     </div>
     
     <button ng-click="confirm()"><span class="glyphicon glyphicon-th">上傳</span></button>

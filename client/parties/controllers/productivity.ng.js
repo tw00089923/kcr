@@ -11,18 +11,21 @@ angular.module("socially").controller("PCtrl", function ($scope, $stateParams, $
   });
   $scope.works = [];
 
-  var af = angular.toJson($scope.ad);
   $scope.time2 = Session.get('abc');
   $scope.fine = ["ass","asa"];
 
   Session.set('abc',new Date() );
-
   var start = moment([1985,10,15]);
-  
 
   $scope.student = $meteor.collection(Student, false).subscribe('student');
 
-  $scope.students = $meteor.collection(Student, false).subscribe("student");
+
+  
+  $scope.fin = $meteor.collection(function() {
+    return Student.find({"productive"});
+  });
+
+  
 
    $meteor.autorun($scope, function() {
   $scope.studentss = $meteor.collection(Student , false).subscribe('student');
@@ -44,7 +47,8 @@ angular.module("socially").controller("PCtrl", function ($scope, $stateParams, $
   
 
   $scope.studentremove = function (a) {
-   $scope.works.splice($scope.work.indexOf(a), 1);
+   $scope.work.splice($scope.work.indexOf(a), 1);
+
   };
   $scope.$stateParams = $stateParams;
  
